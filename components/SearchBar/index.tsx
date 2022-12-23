@@ -5,9 +5,11 @@ import SearchIcon from 'assets/search.svg';
 import DeleteIcon from 'assets/delete.svg';
 import './styles.scss';
 
-export default function SearchBar() {
+
+
+export default function SearchBar({term} : {term?: string}) {
     const router = useRouter();
-	const [search, setSearch] = useState<string>('');
+	const [search, setSearch] = useState<string>(term || '');
 
 	const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearch(e.target.value);
