@@ -21,8 +21,7 @@ export default function SearchBar({term} : {term?: string}) {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLImageElement>) => {
         e.preventDefault();
-        console.log(search);
-        router.replace(`/search?term=${search}`);
+        router.replace(`/search?q=${search}`);
     }
 
 	return (

@@ -10,7 +10,6 @@ import ImageIcon from 'assets/images.svg';
 import NewsIcon from 'assets/news.svg';
 
 import './styles.scss';
-import { textSpanIntersectsWith } from 'typescript';
 export default function SearchLayout({
 	children,
 }: {
@@ -41,14 +40,14 @@ export default function SearchLayout({
 						items={[
 							{
 								label: 'All',
-								to: '/',
+								to: '/search',
 								term: searchTerm,
 								icon: SearchIcon,
 								currentPath: pathname,
 							},
 							{
 								label: 'Images',
-								to: '/search',
+								to: '/search/images',
 								term: searchTerm,
 								icon: ImageIcon,
 								currentPath: pathname,
