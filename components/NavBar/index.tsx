@@ -3,7 +3,7 @@ import './styles.scss';
 import Image from 'next/image';
 type NavBarProps = {
 	label: string;
-	term: string;
+	query: string;
 	to: string;
 	currentPath: string;
 	icon: string;
@@ -30,7 +30,7 @@ export default function NavBar({ items }: { items: NavBarProps[] }) {
 							<Link
 								href={{
 									pathname: item.to,
-									query: { term: 'hello' },
+									query: { q: item.query },
 								}}
 							>
 								{item.label}

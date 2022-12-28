@@ -1,0 +1,43 @@
+.image_card {
+	position: relative;
+	width: 260px;
+	height: auto;
+	overflow: hidden;
+	padding: 10px 5px;
+	@media screen and (max-width: 1024px) {
+		width: 200px;
+	}
+	@media screen and (max-width: 768px) {
+		width: 180px;
+		padding: 5px 3px;
+	}
+	@media screen and (max-width: 400px) {
+		width: 160px;
+	}
+	&__image {
+		width: 100%;
+		height: auto;
+		img {
+			width: 100%;
+			height: auto;
+			vertical-align: bottom;
+			border-radius: 10px;
+		}
+	}
+	&__source {
+		width: 100%;
+		height: auto;
+		margin: 5px 0;
+		overflow: hidden;
+		font-size: 12px;
+		text-decoration: underline;
+	}
+	&__title {
+		width: 100%;
+		height: auto;
+		margin: 5px 0;
+		overflow: hidden;
+		font-size: 14px;
+		font-weight: 600;
+	}
+}

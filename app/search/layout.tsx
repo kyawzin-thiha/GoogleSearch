@@ -18,7 +18,7 @@ export default function SearchLayout({
 	const searchParams = useSearchParams();
 	const pathname = usePathname() as string;
 
-	const searchTerm = searchParams.get('term') as string;
+	const searchTerm = searchParams.get('q') as string;
 	return (
 		<section className="search_layout">
 			<div className="search_layout__logo">
@@ -41,14 +41,14 @@ export default function SearchLayout({
 							{
 								label: 'All',
 								to: '/search',
-								term: searchTerm,
-								icon: SearchIcon,
+								query: searchTerm,
+								 icon: SearchIcon,
 								currentPath: pathname,
 							},
 							{
 								label: 'Images',
 								to: '/search/images',
-								term: searchTerm,
+								query: searchTerm,
 								icon: ImageIcon,
 								currentPath: pathname,
 							},
