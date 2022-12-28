@@ -42,7 +42,7 @@ export default function SearchLayout({
 								label: 'All',
 								to: '/search',
 								query: searchTerm,
-								 icon: SearchIcon,
+								icon: SearchIcon,
 								currentPath: pathname,
 							},
 							{
@@ -50,6 +50,13 @@ export default function SearchLayout({
 								to: '/search/images',
 								query: searchTerm,
 								icon: ImageIcon,
+								currentPath: pathname,
+							},
+							{
+								label: 'News',
+								to: '/search/news',
+								query: searchTerm,
+								icon: NewsIcon,
 								currentPath: pathname,
 							},
 						]}
