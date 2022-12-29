@@ -1,4 +1,4 @@
-# Simple Web Search [Live URL](simplesearch.kyawzinthiha.com)
+# Simple Web Search [Live URL](https://simplesearch.kyawzinthiha.com)
 
 This is a web search website build using Next.js 13 (app folder). You will be able to search through entire internet for websites, images and news with the help of  [Google Programmable Search Engine](programmablesearchengine.google.com) and RapidAPI [Real Time News Data](https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-news-data/).
 
