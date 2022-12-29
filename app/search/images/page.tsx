@@ -11,7 +11,7 @@ const searchItems = async (query: string) => {
 				searchType: 'image',
 			}),
 		{
-			cache: 'force-cache',
+			cache: "no-store"
 		},
 	);
 	const { items } = await res.json();

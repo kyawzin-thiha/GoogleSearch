@@ -14,11 +14,12 @@ const searchNews = async (q: string) => {
 				'X-RapidAPI-Key': process.env.RAPID_API_SECRET as string,
 				'X-RapidAPI-Host': 'real-time-news-data.p.rapidapi.com',
 			},
+			cache: 'no-store',
 		},
-    );
-    const { data } = await res.json();
+	);
+	const { data } = await res.json();
 
-    return data;
+	return data;
 };
 
 export default async function Page({
@@ -26,22 +27,22 @@ export default async function Page({
 }: {
 	searchParams?: { [key: string]: string | string[] | undefined };
 }) {
+	const data = await searchNews(searchParams?.q as string);
 
-    const data = await searchNews(searchParams?.q as string)
-    
 	return (
-        <div className="news_search">
-            {
-                data?.map((item: any) => (
-                    <NewCard item={{
-                        title: item.title,
-                        link: item.link,
-                        source: item.source_url,
-                        sourceIcon: item.source_favicon_url,
-                        image: item.photo_url,
-                    }} key={item.link} />
-                ))
-            }
+		<div className="news_search">
+			{data?.map((item: any) => (
+				<NewCard
+					item={{
+						title: item.title,
+						link: item.link,
+						source: item.source_url,
+						sourceIcon: item.source_favicon_url,
+						image: item.photo_url,
+					}}
+					key={item.link}
+				/>
+			))}
 		</div>
 	);
 }
